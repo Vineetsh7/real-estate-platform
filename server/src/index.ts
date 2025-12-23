@@ -11,6 +11,7 @@ import { authMiddleware } from "./middleware/authMiddleware";
 import managerRoutes from "./routes/managerRoutes";
 import tenantRoutes from "./routes/tenantRoutes";
 import propertyRoutes from "./routes/propertyRoutes";
+import leaseRoutes from "./routes/leaseRoutes";
 
 /* CONFIGURATIONS */
 dotenv.config();
@@ -29,6 +30,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/properties", propertyRoutes);
+app.use("/leases", leaseRoutes);
 app.use("/tenants", authMiddleware(["tenant"]), tenantRoutes);
 app.use("/managers", authMiddleware(["manager"]), managerRoutes);
 
