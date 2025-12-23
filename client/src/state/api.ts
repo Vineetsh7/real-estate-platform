@@ -261,7 +261,7 @@ export const api = createApi({
       },
     }),
 
-    // lease related enpoints
+    // lease related endpoints
     getLeases: build.query<Lease[], number>({
       query: () => "leases",
       providesTags: ["Leases"],

@@ -30,7 +30,7 @@ const components = {
       <View className="mt-4 mb-7">
         <Heading level={3} className="!text-2xl !font-bold">
          Prime
-          <span className="text-secondary-500 font-light hover:!text-primary-300">
+          <span className="text-secondary-600 font-light hover:!text-primary-300">
            Lease
           </span>
         </Heading>
@@ -148,14 +148,12 @@ const Auth = ({ children }: { children: React.ReactNode }) => {
   const isDashboardPage =
     pathname.startsWith("/manager") || pathname.startsWith("/tenants");
 
-  // Redirect authenticated users away from auth pages
   useEffect(() => {
     if (user && isAuthPage) {
       router.push("/");
     }
   }, [user, isAuthPage, router]);
 
-  // Allow access to public pages without authentication
   if (!isAuthPage && !isDashboardPage) {
     return <>{children}</>;
   }
