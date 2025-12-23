@@ -25,6 +25,7 @@ import Link from "next/link";
 const AppSidebar = ({ userType }: AppSidebarProps) => {
   const pathname = usePathname();
   const { toggleSidebar, open } = useSidebar();
+
   const navLinks =
     userType === "manager"
       ? [
@@ -90,7 +91,7 @@ const AppSidebar = ({ userType }: AppSidebarProps) => {
         </SidebarMenu>
       </SidebarHeader>
 
-            <SidebarContent>
+      <SidebarContent>
         <SidebarMenu>
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
