@@ -64,7 +64,7 @@ const HeroSection = () => {
       >
         <div className="max-w-4xl mx-auto px-16 sm:px-12">
           <h1 className="text-5xl font-bold text-white mb-4">
-            Begin your journey toward finding a place you can truly call home.
+            Begin. your journey toward finding a place you can truly call home.
           </h1>
           <p className="text-xl text-white mb-8">
             Explore a curated selection of rental properties designed to match
